@@ -6,8 +6,8 @@ The formula we use for standard deviation depends on whether the data is being c
 - If the data is being considered a population on its own, we divide by the number of data points, N.
 - If the data is a sample from a larger population, we divide by one fewer than the number of data points in the sample, n-1 
 
-1. Population standard deviation:
+1. Population standard deviation: <br/>
 ![img.png](images/img_3.png)
-
-2. Sample standard deviation:
+ <br/>
+2. Sample standard deviation: <br/>
 ![img_1.png](images/img_4.png)
