@@ -1,4 +1,6 @@
-#Mean
-![img_1.png](img_1.png)
+# Mean
+![img_1.png](img_1.png) 
+<br/>
+<br/>
 ![img_2.png](img_2.png)
 
