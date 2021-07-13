@@ -33,17 +33,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.mode(data), statistics.mode(data))
         self.assertEqual(self.statistics.result, statistics.mode(data))
 
-    # def test_variance(self):
-    #     data = []
-    #     data = random_data()
-    #     self.assertEqual(self.statistics.variance(data), statistics.variance(data))
-    #     self.assertEqual(self.statistics.result, statistics.variance(data))
+    def test_variance(self):
+        data = []
+        data = random_data()
+        pprint(statistics.pvariance(data))
+        self.assertEqual(self.statistics.variance(data), statistics.pvariance(data))
+        self.assertEqual(self.statistics.result, statistics.pvariance(data))
 
-    # def test_std_dev(self):
-    #     data = []
-    #     data = random_data()
-    #     self.assertEqual(self.statistics.stddev(data), statistics.stdev(data))
-    #     self.assertEqual(self.statistics.result, statistics.stdev(data))
+    def test_std_dev(self):
+        data = []
+        data = random_data()
+        pprint(round(statistics.pstdev(data), 5))
+        self.assertEqual(self.statistics.stddev(data), round(statistics.pstdev(data), 5))
+        self.assertEqual(self.statistics.result, round(statistics.pstdev(data), 5))
 
 if __name__ == '__main__':
     unittest.main()
