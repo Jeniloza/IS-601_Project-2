@@ -12,8 +12,8 @@ class MyTestCase(unittest.TestCase):
         data = []
         data = random_data()
         pprint(data)
-        if len(data) >= 10 or len(data) <= 0:
-            raise Exception('sample should not exceed 10. The value of sample was: {}'.format(data))
+        # if len(data) >= 11 or len(data) <= 0:
+        #     raise Exception('sample should not exceed 10. The value of sample was: {}'.format(data))
         #pprint(mean(data))
         #pprint (self.statistics.mean(data))
         self.assertEqual(self.statistics.mean(data), mean(data))
