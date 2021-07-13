@@ -1,7 +1,7 @@
 import unittest
 from src.Statistics.Statistics import Statistics
 from src.Statistics.GetRandomData import random_data
-from statistics import mean
+import statistics
 from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
@@ -14,10 +14,36 @@ class MyTestCase(unittest.TestCase):
         pprint(data)
         if len(data) > 10:
             raise Exception('sample should not exceed 10. The value of sample was: {}'.format(data))
-        #pprint(mean(data))
+        pprint(statistics.mean(data))
         #pprint (self.statistics.mean(data))
-        self.assertEqual(self.statistics.mean(data), mean(data))
-        self.assertEqual(self.statistics.result, mean(data))
+        self.assertEqual(self.statistics.mean(data), statistics.mean(data))
+        self.assertEqual(self.statistics.result, statistics.mean(data))
+
+    def test_median(self):
+        data = []
+        data = random_data()
+        pprint(statistics.median(data))
+        self.assertEqual(self.statistics.median(data), statistics.median(data))
+        self.assertEqual(self.statistics.result, statistics.median(data))
+
+    def test_mode(self):
+        data = []
+        data = random_data()
+        pprint(statistics.mode(data))
+        self.assertEqual(self.statistics.mode(data), statistics.mode(data))
+        self.assertEqual(self.statistics.result, statistics.mode(data))
+
+    # def test_variance(self):
+    #     data = []
+    #     data = random_data()
+    #     self.assertEqual(self.statistics.variance(data), statistics.variance(data))
+    #     self.assertEqual(self.statistics.result, statistics.variance(data))
+
+    # def test_std_dev(self):
+    #     data = []
+    #     data = random_data()
+    #     self.assertEqual(self.statistics.stddev(data), statistics.stdev(data))
+    #     self.assertEqual(self.statistics.result, statistics.stdev(data))
 
 if __name__ == '__main__':
     unittest.main()
